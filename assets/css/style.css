@@ -1,0 +1,21 @@
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+.start {
+  border: 3px solid black;
+  width: fit-content;
+  padding: 10px;
+}
+
+.pokemonInfo {
+  border: 3px solid black;
+  width: fit-content;
+  padding: 20px;
+  height: fit-content;
+  margin-left: 50px;
+}
