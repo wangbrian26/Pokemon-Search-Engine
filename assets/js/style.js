@@ -5,11 +5,12 @@ var submitButton = document.querySelector("#submit");
 function getPokemon() {
   var pokemonName = document.querySelector("#pokemonName");
   pokemonName = pokemonName.value;
-  pokemonName = pokemonName.toLowerCase();
-  pokemonName = pokemonName.replace(" ", "-");
-  pokemonName = pokemonName.replace(".", "");
-  console.log(pokemonName);
-  fetch(url + "/" + pokemonName)
+  var pokemonNameSearch = pokemonName;
+  pokemonNameSearch = pokemonNameSearch.toLowerCase();
+  pokemonNameSearch = pokemonNameSearch.replace(".", "");
+  pokemonNameSearch = pokemonNameSearch.replace(" ", "-");
+  console.log(pokemonNameSearch);
+  fetch(url + "/" + pokemonNameSearch)
     .then(function (response) {
       if (response.status !== 200) {
         pokeInfo.textContent = "Please enter a valid Pokemon name.";
