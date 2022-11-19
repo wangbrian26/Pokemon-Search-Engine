@@ -18,6 +18,7 @@ function getPokemon() {
       return response.json();
     })
     .then(function (data) {
+      pokeInfo.textContent = "";
       console.log(data);
       var chosenPokeName = document.createElement("h3");
       chosenPokeName.textContent = pokemonName.toUpperCase();
@@ -42,6 +43,9 @@ function getPokemon() {
           "This pokemon has the ability: " + data.abilities[i].ability.name;
         pokeInfo.appendChild(abilities);
       }
+      var pokeImage = document.createElement("img");
+      pokeImage.setAttribute("src", data.sprite.front_default);
+      pokeInfo.appendChild(pokeImage);
     });
 }
 
